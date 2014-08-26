@@ -4,5 +4,8 @@
   "author": "Mitchell Renton",
   "devDependencies": {
     "normalize-scss": "~3.0.1"
+  },
+  "dependencies": {
+    "fontawesome": "~4.1.0"
   }
 }
