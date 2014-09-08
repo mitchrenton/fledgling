@@ -1,3 +1,15 @@
 /* ========================     
 ~ BREADCRUMB
 ======================== */
+
+.breadcrumb > li + li:before {
+	content: "/ ";
+}
+
+.breadcrumb__home {
+
+}
+
+.breadcrumb__current {
+
+}
