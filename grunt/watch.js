@@ -10,5 +10,11 @@ module.exports = {
   app: {
     tasks: ['jshint', 'concat:app', 'uglify:app','clean','versioning:app'],
     files: ['local/js/app/*.js']
+  },
+  livereload: {
+    options: {
+      livereload: true
+    },
+    files: ['public/**/*']
   }
 };

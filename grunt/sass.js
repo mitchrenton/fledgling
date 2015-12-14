@@ -4,7 +4,7 @@ module.exports = {
     		style: 'expanded'
     	},
 		files: {
-			'public/css/fledgling.min.css' : 'local/scss/style.scss'
+			'public/css/<%= package.name %>.min.css' : 'local/scss/style.scss'
 		}
 	}
 };

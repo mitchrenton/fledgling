@@ -1,18 +1,18 @@
 module.exports = {
   options: {
-    banner: '/*! fledgling <%= grunt.template.today("dd-mm-yyyy") %> */\n',
+    banner: '/*! <%= package.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
     sourceMap: true,
-    soureMapName: 'public/js/fledgling.map',
+    soureMapName: 'public/js/<%= package.name %>.map',
     report: 'gzip'
   },
   plugins: {
     files: {
-      'public/js/fledgling.plugins.min.js': ['tmp/fledgling.plugins.js']
+      'public/js/<%= package.name %>.plugins.min.js': ['tmp/<%= package.name %>.plugins.js']
     }
   },
   app: {
     files: {
-      'public/js/fledgling.app.min.js': ['tmp/fledgling.app.js']
+      'public/js/<%= package.name %>.app.min.js': ['tmp/<%= package.name %>.app.js']
     }
   }
 };

@@ -5,19 +5,25 @@ module.exports = {
 			'index.html'
 		]
 	},
+	js: {
+		src: [
+			'public/js/<%= package.name %>.plugins.min.js',
+			'public/js/<%= package.name %>.app.min.js'
+		]
+	},
 	plugins: {
 		src: [
-			'public/js/fledgling.plugins.min.js'
+			'public/js/<%= package.name %>.plugins.min.js'
 		]
 	},
 	app: {
 		src: [
-			'public/js/fledgling.app.min.js'
+			'public/js/<%= package.name %>.app.min.js'
 		]
 	},
 	css: {
 		src: [
-			'public/css/fledgling.min.css'
+			'public/css/<%= package.name %>.min.css'
 		]
 	}
 };

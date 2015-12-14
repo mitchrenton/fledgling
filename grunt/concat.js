@@ -6,12 +6,12 @@ module.exports = {
     src: [
         
     ],
-    dest: 'tmp/fledgling.plugins.js'
+    dest: 'tmp/<%= package.name %>.plugins.js'
   },
   app: {
     src: [
         
     ],
-    dest: 'tmp/fledgling.app.js'
+    dest: 'tmp/<%= package.name %>.app.js'
   }
 };

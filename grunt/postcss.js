@@ -8,6 +8,6 @@ module.exports = {
 		]
 	},
 	dist: {
-		src: 'public/css/fledgling.min.css'
+		src: 'public/css/<%= package.name %>.min.css'
 	}
 };
