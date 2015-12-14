@@ -1,28 +1,15 @@
 module.exports = function(grunt) {
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		
-		compass: {
-			dev: {
-				options: {
-					sassDir: ['source'],
-					cssDir: ['public/css'],
-					fontsDir: ['pubilc/fonts'],
-					outputStyle: ['compressed'],
-					environment: 'development'
-				}
-			}
-		},
+  
+  // measures the time each task takes
+  require('time-grunt')(grunt);
 
-		watch: {
-			compass: {
-				files: ['**/*.scss'],
-				tasks: ['compass:dev']
-			}
-		}
+  // load grunt config
+  require('load-grunt-config')(grunt);
 
-	});
-	
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.registerTask('js', ['jshint', 'concat', 'uglify', 'clean','versioning:js']);
+
+  grunt.registerTask('css', ['sass', 'postcss', 'clean', 'versioning:css' ]);
+
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'sass', 'postcss', 'clean', 'versioning:js','versioning:css' ]);
+
 };
